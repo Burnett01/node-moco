@@ -27,6 +27,9 @@ Features:
 * [Build](#build)
   * [NPM](#npm)
   * [Make](#make)
+* [Unit-Tests](#unit-tests)
+  * [Make](#make-1)
+  * [NPM](#npm-1)
 * [Contributing](#contributing)
 * [License](#license)
 
@@ -216,6 +219,28 @@ var Moco = require('node-moco').default
 ### Make
 
 ```make build```
+
+---
+
+## Unit-Tests
+
+The testing-framework used by this module is [Mocha](https://github.com/mochajs/mocha) with the BDD / TDD assertion library [Chai](https://github.com/chaijs/chai).
+
+* test/test.default.js `Performs 1 tests` | [Source](../master/test/test.default.js)
+
+Output using [Mocha](https://github.com/mochajs/mocha) `list` reporter:   
+
+<img src="https://i.imgur.com/HFd1jii.png" />
+
+Default reporter: `list`
+
+### Make
+
+```make test```
+
+### NPM
+
+```npm test```
 
 ---
 

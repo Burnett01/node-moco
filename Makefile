@@ -2,4 +2,7 @@ build:
 	@"./node_modules/.bin/webpack" -p
 	@echo "Project has been built"
 
-.PHONY: build
+test:
+	@"./node_modules/.bin/mocha" --reporter list --compilers js:babel-register
+
+.PHONY: build test
