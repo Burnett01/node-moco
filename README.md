@@ -147,7 +147,7 @@ const company = new Moco({
 | options | for example: { include_archived: false } | No | None |
 | cb | optional callback (in case you don't want to use promises) | No | |
 
-Available options: <br>
+Options reference:<br>
 [#187-get-projects](https://www.mocoapp.com/funktionen/21-api/inhalt/61-projekte#187-get-projects)<br>
 [Sorting](#sorting)
 
@@ -220,7 +220,7 @@ mycompany.getProject(58844)
 | options | for example: { from: '2018-02-01' } | No | None |
 | cb | optional callback (in case you don't want to use promises) | No | |
 
-Available options: <br>
+Options reference:<br>
 [#214-get-activities](https://www.mocoapp.com/funktionen/21-api/inhalt/65-zeiteintraege#214-get-activities)<br>
 [Sorting](#sorting)
 
@@ -295,7 +295,7 @@ mycompany.getActivity(58844)
 | options | for example: { from: '2018-02-01' } | No | None |
 | cb | optional callback (in case you don't want to use promises) | No | |
 
-Available options: <br>
+Options reference:<br>
 [#254-get-schedules](https://www.mocoapp.com/funktionen/21-api/inhalt/66-planung#254-get-schedules)<br>
 [Sorting](#sorting)
 
@@ -418,7 +418,7 @@ mycompany.User(58844)
 
 Call as shown above in the [API Reference](#api-reference).
 
-Available options: <br>
+Options reference:<br>
 [#221-get-deals](https://www.mocoapp.com/funktionen/21-api/inhalt/67-leads#221-get-deals)<br>
 [Sorting](#sorting)
 
@@ -432,7 +432,7 @@ Call as shown above in the [API Reference](#api-reference).
 
 Call as shown above in the [API Reference](#api-reference).
 
-Available options: <br>
+Options reference:<br>
 [#224-get-offers](https://www.mocoapp.com/funktionen/21-api/inhalt/68-angebote#224-get-offers)<br>
 [Sorting](#sorting)
 
@@ -446,7 +446,7 @@ Call as shown above in the [API Reference](#api-reference).
 
 Call as shown above in the [API Reference](#api-reference).
 
-Available options: <br>
+Options reference:<br>
 [#227-get-invoices](https://www.mocoapp.com/funktionen/21-api/inhalt/69-rechnungen#227-get-invoices)<br>
 [Sorting](#sorting)
 
@@ -460,7 +460,7 @@ Call as shown above in the [API Reference](#api-reference).
 
 Call as shown above in the [API Reference](#api-reference).
 
-Available options: <br>
+Options reference:<br>
 [#230-get-units](https://www.mocoapp.com/funktionen/21-api/inhalt/70-teams#230-get-units)<br>
 [Sorting](#sorting)
 
@@ -474,7 +474,7 @@ Call as shown above in the [API Reference](#api-reference).
 
 Call as shown above in the [API Reference](#api-reference).
 
-Available options: <br>
+Options reference:<br>
 [#233-get-contacts-organizations](https://www.mocoapp.com/funktionen/21-api/inhalt/72-kontakte-firmen#233-get-contacts-organizations)<br>
 [Sorting](#sorting)
 
@@ -502,7 +502,7 @@ Call as shown above in the [API Reference](#api-reference).
 
 Call as shown above in the [API Reference](#api-reference).
 
-Available options: <br>
+Options reference:<br>
 [#288-get-comments](https://www.mocoapp.com/funktionen/21-api/inhalt/82-notizen#288-get-comments)<br>
 [Sorting](#sorting)
 
