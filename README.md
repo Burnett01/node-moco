@@ -20,9 +20,29 @@ Features:
 * [Property Reference](#property-reference)
 * [Function Reference](#function-reference)
   * [Create a Moco instance](#create-a-moco-instance)
+  * [Get Projects](#get-projects)
+  * [Get Project](#get-project)
   * [Get Activities](#get-activities)
+  * [Get Activity](#get-activity)
   * [Get Schedules](#get-schedules)
+  * [Get Schedule](#get-schedule)
+  * [Get Deals](#get-deals)
+  * [Get Deal](#get-deal)
+  * [Get Offers](#get-offers)
+  * [Get Offer](#get-offer)
+  * [Get Invoices](#get-invoices)
+  * [Get Invoice](#get-invoice)
+  * [Get Units](#get-units)
+  * [Get Unit](#get-unit)
   * [Get Users](#get-users)
+  * [Get User](#get-user)
+  * [Get Contacts Organizations](#get-contacts-organizations)
+  * [Get Contacts Organization](#get-contacts-organization)
+  * [Get Contacts People](#get-contacts-people)
+  * [Get Contacts Person](#get-contacts-person)
+  * [Get Comments](#get-comments)
+  * [Get Comment](#get-comment)
+* [Sorting](#sorting)
 * [Setup / Install](#setup-install)
 * [Build](#build)
   * [NPM](#npm)
@@ -40,18 +60,47 @@ Features:
 ```javascript
 Moco(
     [Object {
-      domain: String='mycompany',
-      debug: Boolean=false,
+      domain: String='mycompany'
+      debug: Boolean=false
       token: String=''
     } details]
 ) -> Object {
     /* Constants */
-    this: Object=this,
+    this: Object=this
 
     /* Methods */
-    getActivities: [String=from, String=to, function(class ErrorClass err, any results) cb] | Promise
-    getSchedules: [String=from, String=to, function(class ErrorClass err, any results) cb] | Promise
-    getUsers: [function(class ErrorClass err, any results) cb] | Promise
+    getProjects: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getProject: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+
+    getActivities: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getActivity: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+
+    getSchedules: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getSchedule: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+
+    getDeals: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getDeal: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+
+    getOffers: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getOffer: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+
+    getInvoices: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getInvoice: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+
+    getUnits: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getUnit: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+
+    getUsers: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getUser: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+
+    getContactsOrganizations: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getContactsOrganization: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+
+    getContactsPeople: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getContactsPerson: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+
+    getComments: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getComment: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 }
 
 ```
@@ -87,6 +136,79 @@ const company = new Moco({
 })
 ```
 
+### Get Projects
+
+**Available options:**
+
+| |  | Required | Default |
+| ------ | ----------- | ------ | ----- |
+| options | for example: { include_archived: false } | No | None |
+| cb | optional callback (in case you don't want to use promises) | No | |
+
+Available options: <br>
+[#187-get-projects](https://www.mocoapp.com/funktionen/21-api/inhalt/61-projekte#187-get-projects)<br>
+[Sorting](#sorting)
+
+```javascript
+mycompany.getProjects((err, response) => {
+  console.log(err, response)
+})
+
+mycompany.getProjects({
+  include_archived: false
+},
+(err, response) => {
+  console.log(err, response)
+})
+
+/* Promises */
+
+mycompany.getProjects()
+.then((results) => {
+  console.log(results)
+})
+.catch((err) => {
+  console.log(err)
+})
+
+mycompany.getProjects({
+  include_archived: false
+})
+.then((results) => {
+  console.log(results)
+})
+.catch((err) => {
+  console.log(err)
+})
+```
+
+---
+
+### Get Project
+
+**Available options:**
+
+| |  | Required | Default |
+| ------ | ----------- | ------ | ----- |
+| id | for example: 58844  | Yes | None |
+| cb | optional callback (in case you don't want to use promises) | No | |
+
+```javascript
+mycompany.getProject(58844, (err, response) => {
+  console.log(err, response)
+})
+
+/* Promises */
+
+mycompany.getProject(58844)
+.then((results) => {
+  console.log(results)
+})
+.catch((err) => {
+  console.log(err)
+})
+```
+
 ---
 
 ### Get Activities
@@ -95,16 +217,23 @@ const company = new Moco({
 
 | |  | Required | Default |
 | ------ | ----------- | ------ | ----- |
-| from | for example: 2018-02-01 | No | Current date |
-| to | for example: 2018-02-01 | No | Current date |
+| options | for example: { from: '2018-02-01' } | No | None |
 | cb | optional callback (in case you don't want to use promises) | No | |
+
+Available options: <br>
+[#214-get-activities](https://www.mocoapp.com/funktionen/21-api/inhalt/65-zeiteintraege#214-get-activities)<br>
+[Sorting](#sorting)
 
 ```javascript
 mycompany.getActivities((err, response) => {
   console.log(err, response)
 })
 
-mycompany.getActivities('2017-01-02', '2017-01-02', (err, response) => {
+mycompany.getActivities({
+  from: '2017-01-02'
+  to: '2017-01-02'
+},
+(err, response) => {
   console.log(err, response)
 })
 
@@ -118,7 +247,37 @@ mycompany.getActivities()
   console.log(err)
 })
 
-mycompany.getActivities('2017-01-02', '2017-01-02')
+mycompany.getActivities({
+  from: '2017-01-02'
+  to: '2017-01-02'
+})
+.then((results) => {
+  console.log(results)
+})
+.catch((err) => {
+  console.log(err)
+})
+```
+
+---
+
+### Get Activity
+
+**Available options:**
+
+| |  | Required | Default |
+| ------ | ----------- | ------ | ----- |
+| id | for example: 58844  | Yes | None |
+| cb | optional callback (in case you don't want to use promises) | No | |
+
+```javascript
+mycompany.getActivity(58844, (err, response) => {
+  console.log(err, response)
+})
+
+/* Promises */
+
+mycompany.getActivity(58844)
 .then((results) => {
   console.log(results)
 })
@@ -135,16 +294,23 @@ mycompany.getActivities('2017-01-02', '2017-01-02')
 
 | |  | Required | Default |
 | ------ | ----------- | ------ | ----- |
-| from | for example: 2018-02-01 | No | Current date |
-| to | for example: 2018-02-01 | No | Current date |
+| options | for example: { from: '2018-02-01' } | No | None |
 | cb | optional callback (in case you don't want to use promises) | No | |
+
+Available options: <br>
+[#254-get-schedules](https://www.mocoapp.com/funktionen/21-api/inhalt/66-planung#254-get-schedules)<br>
+[Sorting](#sorting)
 
 ```javascript
 mycompany.getSchedules((err, response) => {
   console.log(err, response)
 })
 
-mycompany.getSchedules('2017-01-02', '2017-01-02', (err, response) => {
+mycompany.getSchedules({
+  from: '2017-01-02'
+  to: '2017-01-02'
+}, 
+(err, response) => {
   console.log(err, response)
 })
 
@@ -158,7 +324,37 @@ mycompany.getSchedules()
   console.log(err)
 })
 
-mycompany.getSchedules('2017-01-02', '2017-01-02')
+mycompany.getSchedules({
+  from: '2017-01-02'
+  to: '2017-01-02'
+})
+.then((results) => {
+  console.log(results)
+})
+.catch((err) => {
+  console.log(err)
+})
+```
+
+---
+
+### Get Schedule
+
+**Available options:**
+
+| |  | Required | Default |
+| ------ | ----------- | ------ | ----- |
+| id | for example: 58844  | Yes | None |
+| cb | optional callback (in case you don't want to use promises) | No | |
+
+```javascript
+mycompany.getSchedule(58844, (err, response) => {
+  console.log(err, response)
+})
+
+/* Promises */
+
+mycompany.getSchedule(58844)
 .then((results) => {
   console.log(results)
 })
@@ -175,6 +371,7 @@ mycompany.getSchedules('2017-01-02', '2017-01-02')
 
 | |  | Required | Default |
 | ------ | ----------- | ------ | ----- |
+| options | | No | None |
 | cb | optional callback (in case you don't want to use promises) | No | |
 
 ```javascript
@@ -193,6 +390,159 @@ mycompany.getUsers()
 })
 
 ```
+
+---
+
+### Get User
+
+**Available options:**
+
+| |  | Required | Default |
+| ------ | ----------- | ------ | ----- |
+| id | for example: 58844  | Yes | None |
+| cb | optional callback (in case you don't want to use promises) | No | |
+
+```javascript
+mycompany.User(58844, (err, response) => {
+  console.log(err, response)
+})
+
+/* Promises */
+
+mycompany.User(58844)
+.then((results) => {
+  console.log(results)
+})
+.catch((err) => {
+  console.log(err)
+})
+```
+
+---
+
+### Get Deals
+
+Call as shown above in the [API Reference](#api-reference).
+
+Available options: <br>
+[#221-get-deals](https://www.mocoapp.com/funktionen/21-api/inhalt/67-leads#221-get-deals)<br>
+[Sorting](#sorting)
+
+---
+
+### Get Deal
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+### Get Offers
+
+Call as shown above in the [API Reference](#api-reference).
+
+Available options: <br>
+[#224-get-offers](https://www.mocoapp.com/funktionen/21-api/inhalt/68-angebote#224-get-offers)<br>
+[Sorting](#sorting)
+
+---
+
+### Get Offer
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+### Get Invoices
+
+Call as shown above in the [API Reference](#api-reference).
+
+Available options: <br>
+[#227-get-invoices](https://www.mocoapp.com/funktionen/21-api/inhalt/69-rechnungen#227-get-invoices)<br>
+[Sorting](#sorting)
+
+---
+
+### Get Invoice
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+### Get Units
+
+Call as shown above in the [API Reference](#api-reference).
+
+Available options: <br>
+[#230-get-units](https://www.mocoapp.com/funktionen/21-api/inhalt/70-teams#230-get-units)<br>
+[Sorting](#sorting)
+
+---
+
+### Get Unit
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+### Get Contacts Organizations
+
+Call as shown above in the [API Reference](#api-reference).
+
+Available options: <br>
+[#233-get-contacts-organizations](https://www.mocoapp.com/funktionen/21-api/inhalt/72-kontakte-firmen#233-get-contacts-organizations)<br>
+[Sorting](#sorting)
+
+---
+
+### Get Contacts Organization
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+### Get Contacts People
+
+Call as shown above in the [API Reference](#api-reference).
+
+Available options: <br>
+[#239-get-contacts-people](https://www.mocoapp.com/funktionen/21-api/inhalt/73-kontakte-personen#239-get-contacts-people)<br>
+[Sorting](#sorting)
+
+---
+
+### Get Contacts Person
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+### Get Comments
+
+Call as shown above in the [API Reference](#api-reference).
+
+Available options: <br>
+[#288-get-comments](https://www.mocoapp.com/funktionen/21-api/inhalt/82-notizen#288-get-comments)<br>
+[Sorting](#sorting)
+
+---
+
+### Get Comment
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+## Sorting
+
+You can sort your results by adding ``sort_by``
+to your options object.
+
+```
+sort_by: 'title'
+sort_by: 'date desc'
+```
+
+Read more: [#293-sortierung](https://www.mocoapp.com/funktionen/21-api/inhalt/58-authentifizierung#293-sortierung)
 
 ---
 
