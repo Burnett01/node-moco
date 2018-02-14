@@ -49,9 +49,9 @@ Moco(
     this: Object=this,
 
     /* Methods */
-    getActivities: [String=from, String=to, function(class ErrorClass err, null ok) cb] | Promise
-    getSchedules: [String=from, String=to, function(class ErrorClass err, null ok) cb] | Promise
-    getUsers: [function(class ErrorClass err, null ok) cb] | Promise
+    getActivities: [String=from, String=to, function(class ErrorClass err, any results) cb] | Promise
+    getSchedules: [String=from, String=to, function(class ErrorClass err, any results) cb] | Promise
+    getUsers: [function(class ErrorClass err, any results) cb] | Promise
 }
 
 ```
@@ -224,7 +224,7 @@ var Moco = require('node-moco').default
 
 ## Unit-Tests
 
-The testing-framework used by this module is [Mocha](https://github.com/mochajs/mocha) with the BDD / TDD assertion library [Chai](https://github.com/chaijs/chai).
+The testing-framework used in this module is [Mocha](https://github.com/mochajs/mocha) with the BDD / TDD assertion library [Chai](https://github.com/chaijs/chai).
 
 * test/test.default.js `Performs 1 tests` | [Source](../master/test/test.default.js)
 
