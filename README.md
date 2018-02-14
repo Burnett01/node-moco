@@ -69,38 +69,39 @@ Moco(
     this: Object=this
 
     /* Methods */
-    getProjects: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getProject: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+    getProjects: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
+    getProjects: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
+    getProject: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
 
-    getActivities: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getActivity: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+    getActivities: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
+    getActivity: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
 
-    getSchedules: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getSchedule: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+    getSchedules: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
+    getSchedule: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
 
-    getDeals: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getDeal: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+    getDeals: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
+    getDeal: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
 
-    getOffers: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getOffer: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+    getOffers: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
+    getOffer: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
 
-    getInvoices: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getInvoice: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+    getInvoices: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
+    getInvoice: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
 
-    getUnits: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getUnit: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+    getUnits: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
+    getUnit: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
 
-    getUsers: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getUser: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+    getUsers: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
+    getUser: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
 
-    getContactsOrganizations: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getContactsOrganization: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+    getContactsOrganizations: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
+    getContactsOrganization: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
 
-    getContactsPeople: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getContactsPerson: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+    getContactsPeople: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
+    getContactsPerson: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
 
-    getComments: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getComment: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+    getComments: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
+    getComment: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
 }
 
 ```
@@ -135,6 +136,7 @@ const company = new Moco({
   apikey: '<key here>'
 })
 ```
+---
 
 ### Get Projects
 
@@ -181,8 +183,6 @@ mycompany.getProjects({
   console.log(err)
 })
 ```
-
----
 
 ### Get Project
 
@@ -259,8 +259,6 @@ mycompany.getActivities({
 })
 ```
 
----
-
 ### Get Activity
 
 **Available options:**
@@ -336,8 +334,6 @@ mycompany.getSchedules({
 })
 ```
 
----
-
 ### Get Schedule
 
 **Available options:**
@@ -391,8 +387,6 @@ mycompany.getUsers()
 
 ```
 
----
-
 ### Get User
 
 **Available options:**
@@ -428,8 +422,6 @@ Available options: <br>
 [#221-get-deals](https://www.mocoapp.com/funktionen/21-api/inhalt/67-leads#221-get-deals)<br>
 [Sorting](#sorting)
 
----
-
 ### Get Deal
 
 Call as shown above in the [API Reference](#api-reference).
@@ -443,8 +435,6 @@ Call as shown above in the [API Reference](#api-reference).
 Available options: <br>
 [#224-get-offers](https://www.mocoapp.com/funktionen/21-api/inhalt/68-angebote#224-get-offers)<br>
 [Sorting](#sorting)
-
----
 
 ### Get Offer
 
@@ -460,8 +450,6 @@ Available options: <br>
 [#227-get-invoices](https://www.mocoapp.com/funktionen/21-api/inhalt/69-rechnungen#227-get-invoices)<br>
 [Sorting](#sorting)
 
----
-
 ### Get Invoice
 
 Call as shown above in the [API Reference](#api-reference).
@@ -475,8 +463,6 @@ Call as shown above in the [API Reference](#api-reference).
 Available options: <br>
 [#230-get-units](https://www.mocoapp.com/funktionen/21-api/inhalt/70-teams#230-get-units)<br>
 [Sorting](#sorting)
-
----
 
 ### Get Unit
 
@@ -492,8 +478,6 @@ Available options: <br>
 [#233-get-contacts-organizations](https://www.mocoapp.com/funktionen/21-api/inhalt/72-kontakte-firmen#233-get-contacts-organizations)<br>
 [Sorting](#sorting)
 
----
-
 ### Get Contacts Organization
 
 Call as shown above in the [API Reference](#api-reference).
@@ -508,8 +492,6 @@ Available options: <br>
 [#239-get-contacts-people](https://www.mocoapp.com/funktionen/21-api/inhalt/73-kontakte-personen#239-get-contacts-people)<br>
 [Sorting](#sorting)
 
----
-
 ### Get Contacts Person
 
 Call as shown above in the [API Reference](#api-reference).
@@ -523,8 +505,6 @@ Call as shown above in the [API Reference](#api-reference).
 Available options: <br>
 [#288-get-comments](https://www.mocoapp.com/funktionen/21-api/inhalt/82-notizen#288-get-comments)<br>
 [Sorting](#sorting)
-
----
 
 ### Get Comment
 
