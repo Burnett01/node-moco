@@ -1,6 +1,6 @@
 {
   "name": "node-moco",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A microservice api-client to access Mocoapp.com API",
   "keywords": [
     "moco",
@@ -25,6 +25,7 @@
   "bugs": {
     "url": "https://github.com/Burnett01/node-moco/issues"
   },
+  "main": "dist/moco.js",
   "scripts": {
     "build": "babel lib -d dist",
     "test": "mocha --compilers js:babel-register --reporter list",
