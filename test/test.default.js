@@ -22,10 +22,10 @@
 *
 */
 
-import { expect } from 'chai';
+import { expect } from 'chai'
 import Moco from '../lib/moco'
 
-let moco = undefined;
+let moco = undefined
 
 describe('Moco [TEST]', () => {
 
@@ -35,75 +35,75 @@ describe('Moco [TEST]', () => {
       domain: 'mycompany',
       apikey: '',
       debug: true
-    });
+    })
 
-    expect(moco).to.be.a('object');
+    expect(moco).to.be.a('object')
 
-    expect(moco).to.have.property('driver');
-    expect(moco.driver).to.be.a('object');
+    expect(moco).to.have.property('driver')
+    expect(moco.driver).to.be.a('object')
 
-    expect(moco).to.have.property('paths');
-    expect(moco.paths).to.be.a('object');
+    expect(moco).to.have.property('paths')
+    expect(moco.paths).to.be.a('object')
 
-    expect(moco).to.have.property('perform');
-    expect(moco.perform).to.be.a('function');
+    expect(moco).to.have.property('perform')
+    expect(moco.perform).to.be.a('function')
 
-    expect(moco).to.have.property('getProjects');
-    expect(moco).to.have.property('getProject');
-    expect(moco.getProjects).to.be.a('function');
-    expect(moco.getProject).to.be.a('function');
+    expect(moco).to.have.property('getProjects')
+    expect(moco).to.have.property('getProject')
+    expect(moco.getProjects).to.be.a('function')
+    expect(moco.getProject).to.be.a('function')
     
-    expect(moco).to.have.property('getActivities');
-    expect(moco).to.have.property('getActivity');
-    expect(moco.getActivities).to.be.a('function');
-    expect(moco.getActivity).to.be.a('function');
+    expect(moco).to.have.property('getActivities')
+    expect(moco).to.have.property('getActivity')
+    expect(moco.getActivities).to.be.a('function')
+    expect(moco.getActivity).to.be.a('function')
 
-    expect(moco).to.have.property('getSchedules');
-    expect(moco).to.have.property('getSchedule');
-    expect(moco.getSchedules).to.be.a('function');
-    expect(moco.getSchedule).to.be.a('function');
+    expect(moco).to.have.property('getSchedules')
+    expect(moco).to.have.property('getSchedule')
+    expect(moco.getSchedules).to.be.a('function')
+    expect(moco.getSchedule).to.be.a('function')
 
-    expect(moco).to.have.property('getDeals');
-    expect(moco).to.have.property('getDeal');
-    expect(moco.getDeals).to.be.a('function');
-    expect(moco.getDeal).to.be.a('function');
+    expect(moco).to.have.property('getDeals')
+    expect(moco).to.have.property('getDeal')
+    expect(moco.getDeals).to.be.a('function')
+    expect(moco.getDeal).to.be.a('function')
 
-    expect(moco).to.have.property('getOffers');
-    expect(moco).to.have.property('getOffer');
-    expect(moco.getOffers).to.be.a('function');
-    expect(moco.getOffer).to.be.a('function');
+    expect(moco).to.have.property('getOffers')
+    expect(moco).to.have.property('getOffer')
+    expect(moco.getOffers).to.be.a('function')
+    expect(moco.getOffer).to.be.a('function')
 
-    expect(moco).to.have.property('getInvoices');
-    expect(moco).to.have.property('getInvoice');
-    expect(moco.getInvoices).to.be.a('function');
-    expect(moco.getInvoice).to.be.a('function');
+    expect(moco).to.have.property('getInvoices')
+    expect(moco).to.have.property('getInvoice')
+    expect(moco.getInvoices).to.be.a('function')
+    expect(moco.getInvoice).to.be.a('function')
     
-    expect(moco).to.have.property('getUnits');
-    expect(moco).to.have.property('getUnit');
-    expect(moco.getUnits).to.be.a('function');
-    expect(moco.getUnit).to.be.a('function');
+    expect(moco).to.have.property('getUnits')
+    expect(moco).to.have.property('getUnit')
+    expect(moco.getUnits).to.be.a('function')
+    expect(moco.getUnit).to.be.a('function')
 
-    expect(moco).to.have.property('getUsers');
-    expect(moco).to.have.property('getUser');
-    expect(moco.getUsers).to.be.a('function');
-    expect(moco.getUser).to.be.a('function');
+    expect(moco).to.have.property('getUsers')
+    expect(moco).to.have.property('getUser')
+    expect(moco.getUsers).to.be.a('function')
+    expect(moco.getUser).to.be.a('function')
 
-    expect(moco).to.have.property('getContactsOrganizations');
-    expect(moco).to.have.property('getContactsOrganization');
-    expect(moco.getContactsOrganizations).to.be.a('function');
-    expect(moco.getContactsOrganization).to.be.a('function');
+    expect(moco).to.have.property('getContactsOrganizations')
+    expect(moco).to.have.property('getContactsOrganization')
+    expect(moco.getContactsOrganizations).to.be.a('function')
+    expect(moco.getContactsOrganization).to.be.a('function')
 
-    expect(moco).to.have.property('getContactsPeople');
-    expect(moco).to.have.property('getContactsPerson');
-    expect(moco.getContactsPeople).to.be.a('function');
-    expect(moco.getContactsPerson).to.be.a('function');
+    expect(moco).to.have.property('getContactsPeople')
+    expect(moco).to.have.property('getContactsPerson')
+    expect(moco.getContactsPeople).to.be.a('function')
+    expect(moco.getContactsPerson).to.be.a('function')
 
-    expect(moco).to.have.property('getComments');
-    expect(moco).to.have.property('getComment');
-    expect(moco.getComments).to.be.a('function');
-    expect(moco.getComment).to.be.a('function');
+    expect(moco).to.have.property('getComments')
+    expect(moco).to.have.property('getComment')
+    expect(moco.getComments).to.be.a('function')
+    expect(moco.getComment).to.be.a('function')
 
-    done();
-  });
+    done()
+  })
 
-});
+})
