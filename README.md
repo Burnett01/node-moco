@@ -69,7 +69,6 @@ Moco(
 
     /* Methods */
     getProjects: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
-    getProjects: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
     getProject: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
 
     getActivities: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
