@@ -9,7 +9,6 @@ This module is based on my [Extended-Request](https://github.com/Burnett01/exten
 in fact it's using that package in order to perform the api requests.
 
 Features:
-  * GZIP compression (thanks to [Extended-Request](https://github.com/Burnett01/extended-request))
   * ES6 & ES5 support
   * Promises & classic nodeback
 
@@ -535,7 +534,7 @@ Use `npm install node-moco`
 import Moco from 'node-moco'
 
 // ES5
-var Moco = require('node-moco').default
+var Moco = require('node-moco')
 ```
 
 ---
