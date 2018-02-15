@@ -1,5 +1,5 @@
 build:
-	@"./node_modules/.bin/webpack" -p
+	@"./node_modules/.bin/babel" lib -d dist
 	@echo "Project has been built"
 
 test:
