@@ -395,13 +395,13 @@ mycompany.getUsers()
 | cb | optional callback (in case you don't want to use promises) | No | |
 
 ```javascript
-mycompany.User(58844, (err, response) => {
+mycompany.getUser(58844, (err, response) => {
   console.log(err, response)
 })
 
 /* Promises */
 
-mycompany.User(58844)
+mycompany.getUser(58844)
 .then((results) => {
   console.log(results)
 })
