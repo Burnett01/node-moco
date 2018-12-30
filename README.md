@@ -284,6 +284,79 @@ mycompany.getActivity(58844)
 
 ---
 
+### Get Companies
+
+**Available options:**
+
+| |  | Required | Default |
+| ------ | ----------- | ------ | ----- |
+| options | for example: { type: 'customer' } | No | None |
+| cb | optional callback (in case you don't want to use promises) | No | |
+
+Options reference:<br>
+[#get-companies](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/companies.md#get-companies)<br>
+[Sorting](#sorting)
+
+```javascript
+mycompany.getCompanies((err, response) => {
+  console.log(err, response)
+})
+
+mycompany.getCompanies({
+  type: 'customer'
+},
+(err, response) => {
+  console.log(err, response)
+})
+
+/* Promises */
+
+mycompany.getCompanies()
+.then((results) => {
+  console.log(results)
+})
+.catch((err) => {
+  console.log(err)
+})
+
+mycompany.getCompanies({
+  type: 'customer'
+})
+.then((results) => {
+  console.log(results)
+})
+.catch((err) => {
+  console.log(err)
+})
+```
+
+### Get Company
+
+**Available options:**
+
+| |  | Required | Default |
+| ------ | ----------- | ------ | ----- |
+| id | for example: 58844  | Yes | None |
+| cb | optional callback (in case you don't want to use promises) | No | |
+
+```javascript
+mycompany.getCompany(58844, (err, response) => {
+  console.log(err, response)
+})
+
+/* Promises */
+
+mycompany.getCompany(58844)
+.then((results) => {
+  console.log(results)
+})
+.catch((err) => {
+  console.log(err)
+})
+```
+
+---
+
 ### Get Schedules
 
 **Available options:**

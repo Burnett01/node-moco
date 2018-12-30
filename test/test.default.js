@@ -58,6 +58,11 @@ describe('Moco [TEST]', () => {
     expect(moco.getActivities).to.be.a('function')
     expect(moco.getActivity).to.be.a('function')
 
+    expect(moco).to.have.property('getCompanies')
+    expect(moco).to.have.property('getCompany')
+    expect(moco.getCompanies).to.be.a('function')
+    expect(moco.getCompany).to.be.a('function')
+
     expect(moco).to.have.property('getSchedules')
     expect(moco).to.have.property('getSchedule')
     expect(moco.getSchedules).to.be.a('function')
