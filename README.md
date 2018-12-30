@@ -3,7 +3,7 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Build Status](https://travis-ci.org/Burnett01/node-moco.svg?branch=master)](https://travis-ci.org/Burnett01/node-moco) [![npm version](https://badge.fury.io/js/node-moco.svg?ver=88)](https://badge.fury.io/js/node-moco)
 
-A microservice api-client to access [Mocoapp.com API](https://www.mocoapp.com/funktionen/21-api/).
+A microservice api-client to access [Mocoapp.com API](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/README.md).
 
 This module is based on my [Extended-Request](https://github.com/Burnett01/extended-request) package,<br>
 in fact it's using that package in order to perform the api requests.
@@ -146,7 +146,7 @@ const company = new Moco({
 | cb | optional callback (in case you don't want to use promises) | No | |
 
 Options reference:<br>
-[#187-get-projects](https://www.mocoapp.com/funktionen/21-api/inhalt/61-projekte#187-get-projects)<br>
+[#187-get-projects](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/projects.md#get-projects)<br>
 [Sorting](#sorting)
 
 ```javascript
@@ -219,7 +219,7 @@ mycompany.getProject(58844)
 | cb | optional callback (in case you don't want to use promises) | No | |
 
 Options reference:<br>
-[#214-get-activities](https://www.mocoapp.com/funktionen/21-api/inhalt/65-zeiteintraege#214-get-activities)<br>
+[#214-get-activities](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/activities.md#get-activities)<br>
 [Sorting](#sorting)
 
 ```javascript
@@ -294,7 +294,7 @@ mycompany.getActivity(58844)
 | cb | optional callback (in case you don't want to use promises) | No | |
 
 Options reference:<br>
-[#254-get-schedules](https://www.mocoapp.com/funktionen/21-api/inhalt/66-planung#254-get-schedules)<br>
+[#254-get-schedules](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/schedules.md#get-schedules)<br>
 [Sorting](#sorting)
 
 ```javascript
@@ -368,6 +368,10 @@ mycompany.getSchedule(58844)
 | options | | No | None |
 | cb | optional callback (in case you don't want to use promises) | No | |
 
+Options reference:<br>
+[#254-get-schedules](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/users.md#get-users)<br>
+[Sorting](#sorting)
+
 ```javascript
 mycompany.getUsers((err, response) => {
   console.log(err, response)
@@ -417,7 +421,7 @@ mycompany.getUser(58844)
 Call as shown above in the [API Reference](#api-reference).
 
 Options reference:<br>
-[#221-get-deals](https://www.mocoapp.com/funktionen/21-api/inhalt/67-leads#221-get-deals)<br>
+[#221-get-deals](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/deals.md#get-deals)<br>
 [Sorting](#sorting)
 
 ### Get Deal
@@ -431,7 +435,7 @@ Call as shown above in the [API Reference](#api-reference).
 Call as shown above in the [API Reference](#api-reference).
 
 Options reference:<br>
-[#224-get-offers](https://www.mocoapp.com/funktionen/21-api/inhalt/68-angebote#224-get-offers)<br>
+[#224-get-offers](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/offers.md#get-offers)<br>
 [Sorting](#sorting)
 
 ### Get Offer
@@ -445,7 +449,7 @@ Call as shown above in the [API Reference](#api-reference).
 Call as shown above in the [API Reference](#api-reference).
 
 Options reference:<br>
-[#227-get-invoices](https://www.mocoapp.com/funktionen/21-api/inhalt/69-rechnungen#227-get-invoices)<br>
+[#227-get-invoices](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/invoices.md#get-invoices)<br>
 [Sorting](#sorting)
 
 ### Get Invoice
@@ -459,7 +463,7 @@ Call as shown above in the [API Reference](#api-reference).
 Call as shown above in the [API Reference](#api-reference).
 
 Options reference:<br>
-[#230-get-units](https://www.mocoapp.com/funktionen/21-api/inhalt/70-teams#230-get-units)<br>
+[#230-get-units](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/units.md#get-units)<br>
 [Sorting](#sorting)
 
 ### Get Unit
@@ -487,7 +491,7 @@ Call as shown above in the [API Reference](#api-reference).
 Call as shown above in the [API Reference](#api-reference).
 
 Available options: <br>
-[#239-get-contacts-people](https://www.mocoapp.com/funktionen/21-api/inhalt/73-kontakte-personen#239-get-contacts-people)<br>
+[#239-get-contacts-people](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/contacts.md#get-contactspeople)<br>
 [Sorting](#sorting)
 
 ### Get Contacts Person
@@ -501,7 +505,7 @@ Call as shown above in the [API Reference](#api-reference).
 Call as shown above in the [API Reference](#api-reference).
 
 Options reference:<br>
-[#288-get-comments](https://www.mocoapp.com/funktionen/21-api/inhalt/82-notizen#288-get-comments)<br>
+[#288-get-comments](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/comments.md#get-comments)<br>
 [Sorting](#sorting)
 
 ### Get Comment
@@ -520,7 +524,7 @@ sort_by: 'title'
 sort_by: 'date desc'
 ```
 
-Read more: [#293-sortierung](https://www.mocoapp.com/funktionen/21-api/inhalt/58-authentifizierung#293-sortierung)
+Read more: [#293-sortierung](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/README.md#sorting)
 
 ---
 
