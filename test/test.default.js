@@ -82,6 +82,11 @@ describe('Moco [TEST]', () => {
     expect(moco).to.have.property('getInvoice')
     expect(moco.getInvoices).to.be.a('function')
     expect(moco.getInvoice).to.be.a('function')
+
+    expect(moco).to.have.property('getInvoicePayments')
+    expect(moco).to.have.property('getInvoicePayment')
+    expect(moco.getInvoicePayments).to.be.a('function')
+    expect(moco.getInvoicePayment).to.be.a('function')
     
     expect(moco).to.have.property('getUnits')
     expect(moco).to.have.property('getUnit')

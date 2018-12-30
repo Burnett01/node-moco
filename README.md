@@ -74,6 +74,9 @@ Moco(
     getActivities: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
     getActivity: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
 
+    getCompanies: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
+    getCompany: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
+
     getSchedules: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
     getSchedule: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
 
@@ -85,6 +88,9 @@ Moco(
 
     getInvoices: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
     getInvoice: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
+
+    getInvoicePayments: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
+    getInvoicePayment: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
 
     getUnits: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
     getUnit: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
@@ -526,6 +532,20 @@ Options reference:<br>
 [Sorting](#sorting)
 
 ### Get Invoice
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+### Get Invoice Payments
+
+Call as shown above in the [API Reference](#api-reference).
+
+Options reference:<br>
+[#invoice-payments](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/invoice_payments.md#get-invoicespayments)<br>
+[Sorting](#sorting)
+
+### Get Invoice Payment
 
 Call as shown above in the [API Reference](#api-reference).
 
