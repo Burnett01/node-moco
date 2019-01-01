@@ -51,7 +51,7 @@ Features:
 * [Unit-Tests](#unit-tests)
   * [Make](#make-1)
   * [NPM](#npm-1)
-* [Notable Changes](CHANGES)
+* [Notable Changes](CHANGES.md)
 * [Contributing](#contributing)
 * [License](#license)
 
