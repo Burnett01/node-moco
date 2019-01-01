@@ -39,8 +39,6 @@ Features:
   * [Get Unit](#get-unit)
   * [Get Users](#get-users)
   * [Get User](#get-user)
-  * [Get Contacts Organizations](#get-contacts-organizations)
-  * [Get Contacts Organization](#get-contacts-organization)
   * [Get Contacts People](#get-contacts-people)
   * [Get Contacts Person](#get-contacts-person)
   * [Get Comments](#get-comments)
@@ -564,20 +562,6 @@ Options reference:<br>
 [Sorting](#sorting)
 
 ### Get Unit
-
-Call as shown above in the [API Reference](#api-reference).
-
----
-
-### Get Contacts Organizations
-
-Call as shown above in the [API Reference](#api-reference).
-
-Options reference:<br>
-[#233-get-contacts-organizations](https://www.mocoapp.com/funktionen/21-api/inhalt/72-kontakte-firmen#233-get-contacts-organizations)<br>
-[Sorting](#sorting)
-
-### Get Contacts Organization
 
 Call as shown above in the [API Reference](#api-reference).
 
