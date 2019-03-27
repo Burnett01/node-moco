@@ -4,6 +4,7 @@
 
 + Added new endpoints `getUserEmployments` `getUserEmployment`
 + Added new endpoint `getProjectsAssigned``
++ Added new endpoints `getUserHolidays` `getUserHoliday`
 
 ## 01.01.2019
 
