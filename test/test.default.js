@@ -105,6 +105,11 @@ describe('Moco [TEST]', () => {
     expect(moco.getUserEmployments).to.be.a('function')
     expect(moco.getUserEmployment).to.be.a('function')
 
+    expect(moco).to.have.property('getUserHolidays')
+    expect(moco).to.have.property('getUserHoliday')
+    expect(moco.getUserHolidays).to.be.a('function')
+    expect(moco.getUserHoliday).to.be.a('function')
+
     expect(moco).to.have.property('getContactsPeople')
     expect(moco).to.have.property('getContactsPerson')
     expect(moco.getContactsPeople).to.be.a('function')
