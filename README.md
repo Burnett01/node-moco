@@ -39,6 +39,8 @@ Features:
   * [Get Unit](#get-unit)
   * [Get Users](#get-users)
   * [Get User](#get-user)
+  * [Get User Employments](#get-user-employments)
+  * [Get User Employment](#get-user-employment)
   * [Get Contacts People](#get-contacts-people)
   * [Get Contacts Person](#get-contacts-person)
   * [Get Comments](#get-comments)
@@ -100,6 +102,9 @@ Moco(
 
     getUsers: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
     getUser: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
+
+    getUserEmployments: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
+    getUserEmployment: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
 
     getContactsOrganizations: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
     getContactsOrganization: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
@@ -498,6 +503,22 @@ mycompany.getUser(58844)
 
 ---
 
+### Get User Employments
+
+Call as shown above in the [API Reference](#api-reference).
+
+Options reference:<br>
+[#get-user-employments](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/employments.md#get-usersemployments)<br>
+[Sorting](#sorting)
+
+---
+
+### Get User Employment
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
 ### Get Deals
 
 Call as shown above in the [API Reference](#api-reference).
@@ -505,6 +526,8 @@ Call as shown above in the [API Reference](#api-reference).
 Options reference:<br>
 [#221-get-deals](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/deals.md#get-deals)<br>
 [Sorting](#sorting)
+
+---
 
 ### Get Deal
 
