@@ -21,6 +21,7 @@ Features:
   * [Create a Moco instance](#create-a-moco-instance)
   * [Get Projects](#get-projects)
   * [Get Project](#get-project)
+  * [Get Projects Assigned](#get-projects-assigned)
   * [Get Activities](#get-activities)
   * [Get Activity](#get-activity)
   * [Get Companies](#get-companies)
@@ -75,6 +76,7 @@ Moco(
     /* Methods */
     getProjects: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
     getProject: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
+    getProjectsAssigned: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
 
     getActivities: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
     getActivity: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
@@ -220,6 +222,15 @@ mycompany.getProject(58844)
   console.log(err)
 })
 ```
+
+---
+
+### Get Projects Assigned
+
+Call as shown above in the [API Reference](#api-reference).
+
+Options reference:<br>
+[#get-projects-assigned](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/projects.md#get-projectsassigned)<br>
 
 ---
 
