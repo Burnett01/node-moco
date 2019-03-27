@@ -2,7 +2,8 @@
 
 ## 27.03.2019
 
-Added new endpoints `getUserEmployments` `getUserEmployment`
++ Added new endpoints `getUserEmployments` `getUserEmployment`
++ Added new endpoint `getProjectsAssigned``
 
 ## 01.01.2019
 
