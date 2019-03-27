@@ -42,6 +42,8 @@ Features:
   * [Get User](#get-user)
   * [Get User Employments](#get-user-employments)
   * [Get User Employment](#get-user-employment)
+  * [Get User Holidays](#get-user-holidays)
+  * [Get User Holiday](#get-user-holiday)
   * [Get Contacts People](#get-contacts-people)
   * [Get Contacts Person](#get-contacts-person)
   * [Get Comments](#get-comments)
@@ -107,6 +109,9 @@ Moco(
 
     getUserEmployments: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
     getUserEmployment: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
+
+    getUserHolidays: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
+    getUserHoliday: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
 
     getContactsOrganizations: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
     getContactsOrganization: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
@@ -525,6 +530,22 @@ Options reference:<br>
 ---
 
 ### Get User Employment
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+### Get User Holidays
+
+Call as shown above in the [API Reference](#api-reference).
+
+Options reference:<br>
+[#get-user-holidays](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/holidays.md#get-usersholidays)<br>
+[Sorting](#sorting)
+
+---
+
+### Get User Holiday
 
 Call as shown above in the [API Reference](#api-reference).
 
