@@ -1,5 +1,9 @@
 # Changes
 
+## 27.03.2019
+
+Added new endpoints `getUserEmployments` `getUserEmployment`
+
 ## 01.01.2019
 
 The ``getContactsOrganizations`` and ``getContactsOrganization`` methods have been deprecated and removed.
