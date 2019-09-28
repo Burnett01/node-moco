@@ -1,5 +1,5 @@
 {
-  "name": "node-moco",
+  "name": "@burnett01/node-moco",
   "version": "3.3.0",
   "description": "A microservice api-client to access Mocoapp.com API",
   "keywords": [
@@ -20,7 +20,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Burnett01/node-moco.git"
+    "url": "ssh://git@github.com/Burnett01/node-moco.git"
   },
   "bugs": {
     "url": "https://github.com/Burnett01/node-moco/issues"
