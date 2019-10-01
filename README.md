@@ -80,6 +80,7 @@ Moco(
     getProjects: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
     getProject: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
     getProjectsAssigned: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
+    getProjectsExpenses: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
 
     getActivities: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
     getActivity: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
