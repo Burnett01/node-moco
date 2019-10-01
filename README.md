@@ -22,6 +22,7 @@ Features:
   * [Get Projects](#get-projects)
   * [Get Project](#get-project)
   * [Get Projects Assigned](#get-projects-assigned)
+  * [Get Projects Expenses](#get-projects-expenses)
   * [Get Activities](#get-activities)
   * [Get Activity](#get-activity)
   * [Get Companies](#get-companies)
@@ -236,6 +237,15 @@ Call as shown above in the [API Reference](#api-reference).
 
 Options reference:<br>
 [#get-projects-assigned](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/projects.md#get-projectsassigned)<br>
+
+---
+
+### Get Projects Expenses
+
+Call as shown above in the [API Reference](#api-reference).
+
+Options reference:<br>
+[#get-projects-expenses](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/project_expenses.md)<br>
 
 ---
 
