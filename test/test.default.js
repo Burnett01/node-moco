@@ -4,7 +4,7 @@
 * Product:      node-moco
 * Description:  A microservice api-client to access Mocoapp.com API
 *
-* Copyright (c) 2018-2019 Steven Agyekum <agyekum@posteo.de>
+* Copyright (c) 2018-2020 Steven Agyekum <agyekum@posteo.de>
 *
 * Permission is hereby granted, free of charge, to any person obtaining a copy of this software
 * and associated documentation files (the "Software"), to deal in the Software without restriction,
