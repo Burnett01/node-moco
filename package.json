@@ -1,6 +1,6 @@
 {
   "name": "@burnett01/node-moco",
-  "version": "3.8.0",
+  "version": "3.8.1",
   "description": "A microservice api-client to access Mocoapp.com API",
   "keywords": [
     "moco",
@@ -32,7 +32,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "extended-request": "^1.0.8"
+    "@burnett01/extended-request": "^1.5.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.3",
