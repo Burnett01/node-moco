@@ -1,7 +1,7 @@
 
 # node-moco
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Build Status](https://travis-ci.org/Burnett01/node-moco.svg?branch=master)](https://travis-ci.org/Burnett01/node-moco) [![npm version](https://badge.fury.io/js/node-moco.svg?ver=88)](https://badge.fury.io/js/node-moco)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Build Status](https://travis-ci.org/Burnett01/node-moco.svg?branch=master)](https://travis-ci.org/Burnett01/node-moco) [![npm version](https://badge.fury.io/js/%40burnett01%2Fnode-moco.svg)](https://badge.fury.io/js/%40burnett01%2Fnode-moco)
 
 A microservice api-client to access [Mocoapp.com API](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/README.md).
 
@@ -678,14 +678,14 @@ Read more: [#293-sortierung](https://github.com/hundertzehn/mocoapp-api-docs/blo
 
 ## Setup / Install
 
-Use `npm install node-moco` 
+Use `npm install @burnett01/node-moco` 
 
 ```javascript
 // ES6
-import Moco from 'node-moco'
+import Moco from '@burnett01/node-moco'
 
 // ES5
-var Moco = require('node-moco')
+var Moco = require('@burnett01/node-moco')
 ```
 
 ---
