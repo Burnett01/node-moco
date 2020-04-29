@@ -37,6 +37,12 @@ describe('Moco [TEST]', () => {
       debug: true
     })
 
+    done()
+
+  })
+
+  it('checks for properties and types', done => {
+
     expect(moco).to.be.a('object')
 
     expect(moco).to.have.property('driver')
