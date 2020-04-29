@@ -775,11 +775,7 @@ Read more: [#sorting](https://github.com/hundertzehn/mocoapp-api-docs/blob/maste
 Use `npm install @burnett01/node-moco` 
 
 ```javascript
-// ES6
-import Moco from '@burnett01/node-moco'
-
-// ES5
-var Moco = require('@burnett01/node-moco')
+const Moco = require('@burnett01/node-moco')
 ```
 
 ---
