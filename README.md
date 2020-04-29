@@ -9,34 +9,46 @@ This module is based on my [Extended-Request](https://github.com/Burnett01/exten
 in fact it's using that package in order to perform the api requests.
 
 Features:
-  * ES6 & ES5 support
-  * Promises & classic nodeback
+  * ES8 (Async/Await)
+  * ES6 (Promises)
+  * ES5 (Callback)
+  * Debug Mode
 
 ---
 
 # Table of contents
 * [API Reference](#api-reference)
 * [Property Reference](#property-reference)
-* [Function Reference](#function-reference)
+* [Method Reference](#method-reference)
   * [Create a Moco instance](#create-a-moco-instance)
-  * [Get Projects](#get-projects)
-  * [Get Project](#get-project)
-  * [Get Projects Assigned](#get-projects-assigned)
-  * [Get Projects Expenses](#get-projects-expenses)
   * [Get Activities](#get-activities)
   * [Get Activity](#get-activity)
   * [Get Companies](#get-companies)
   * [Get Company](#get-company)
-  * [Get Schedules](#get-schedules)
-  * [Get Schedule](#get-schedule)
+  * [Get Comments](#get-comments)
+  * [Get Comment](#get-comment)
+  * [Get Contacts People](#get-contacts-people)
+  * [Get Contacts Person](#get-contacts-person)
   * [Get Deals](#get-deals)
   * [Get Deal](#get-deal)
-  * [Get Offers](#get-offers)
-  * [Get Offer](#get-offer)
+  * [Get Deal Categories](#get-deal-categories)
+  * [Get Deal Category](#get-deal-category)
   * [Get Invoices](#get-invoices)
   * [Get Invoice](#get-invoice)
   * [Get Invoice Payments](#get-invoice-payments)
   * [Get Invoice Payment](#get-invoice-payment)
+  * [Get Offers](#get-offers)
+  * [Get Offer](#get-offer)
+  * [Get Projects](#get-projects)
+  * [Get Project](#get-project)
+  * [Get Projects Assigned](#get-projects-assigned)
+  * [Get Projects Expenses](#get-projects-expenses)
+  * [Get Purchases](#get-purchases)
+  * [Get Purchase](#get-purchase)
+  * [Get Purchase Categories](#get-purchase-categories)
+  * [Get Purchase Category](#get-purchase-category)
+  * [Get Schedules](#get-schedules)
+  * [Get Schedule](#get-schedule)
   * [Get Units](#get-units)
   * [Get Unit](#get-unit)
   * [Get Users](#get-users)
@@ -45,10 +57,6 @@ Features:
   * [Get User Employment](#get-user-employment)
   * [Get User Holidays](#get-user-holidays)
   * [Get User Holiday](#get-user-holiday)
-  * [Get Contacts People](#get-contacts-people)
-  * [Get Contacts Person](#get-contacts-person)
-  * [Get Comments](#get-comments)
-  * [Get Comment](#get-comment)
 * [Sorting](#sorting)
 * [Setup / Install](#setup-install)
 * [Build](#build)
@@ -65,7 +73,7 @@ Features:
 
 ## API Reference
 
-```javascript
+```js
 Moco(
     [Object {
       domain: String='mycompany'
@@ -77,24 +85,17 @@ Moco(
     this: Object=this
 
     /* Methods */
-    getProjects: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getProject: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
-    getProjectsAssigned: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getProjectsExpenses: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-
-    getPurchases: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getPurchase: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
-    getPurchaseCategories: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getPurchaseCategory: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
-
     getActivities: [Object=options, function(class ErrorClass err, any results) cb] | Promise
     getActivity: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
     getCompanies: [Object=options, function(class ErrorClass err, any results) cb] | Promise
     getCompany: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
-    getSchedules: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getSchedule: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+    getComments: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getComment: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+
+    getContactsPeople: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getContactsPerson: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
     getDeals: [Object=options, function(class ErrorClass err, any results) cb] | Promise
     getDeal: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
@@ -102,14 +103,29 @@ Moco(
     getDealCategories: [Object=options, function(class ErrorClass err, any results) cb] | Promise
     getDealCategory: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
-    getOffers: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getOffer: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
-
     getInvoices: [Object=options, function(class ErrorClass err, any results) cb] | Promise
     getInvoice: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
     getInvoicePayments: [Object=options, function(class ErrorClass err, any results) cb] | Promise
     getInvoicePayment: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+
+    getOffers: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getOffer: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+
+    getProjects: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getProject: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+
+    getProjectsAssigned: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getProjectsExpenses: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+
+    getPurchases: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getPurchase: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+
+    getPurchaseCategories: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getPurchaseCategory: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+
+    getSchedules: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getSchedule: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
     getUnits: [Object=options, function(class ErrorClass err, any results) cb] | Promise
     getUnit: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
@@ -121,16 +137,7 @@ Moco(
     getUserEmployment: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
     getUserHolidays: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getUserHoliday: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
-
-    getContactsOrganizations: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getContactsOrganization: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
-
-    getContactsPeople: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getContactsPerson: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
-
-    getComments: [Object=options, function(class ErrorClass err, any results) cb] | Promise
-    getComment: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+    getUserHoliday: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise    
 }
 
 ```
@@ -147,7 +154,7 @@ Moco(
 | debug | Whether to debug requests |
 ---
 
-## Function reference:
+## Method reference:
 
 ### Create a Moco instance
 
@@ -167,97 +174,6 @@ const company = new Moco({
 ```
 ---
 
-### Get Projects
-
-**Available options:**
-
-| |  | Required | Default |
-| ------ | ----------- | ------ | ----- |
-| options | for example: { include_archived: false } | No | None |
-| cb | optional callback (in case you don't want to use promises) | No | |
-
-Options reference:<br>
-[#187-get-projects](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/projects.md#get-projects)<br>
-[Sorting](#sorting)
-
-```javascript
-mycompany.getProjects((err, response) => {
-  console.log(err, response)
-})
-
-mycompany.getProjects({
-  include_archived: false
-},
-(err, response) => {
-  console.log(err, response)
-})
-
-/* Promises */
-
-mycompany.getProjects()
-.then((results) => {
-  console.log(results)
-})
-.catch((err) => {
-  console.log(err)
-})
-
-mycompany.getProjects({
-  include_archived: false
-})
-.then((results) => {
-  console.log(results)
-})
-.catch((err) => {
-  console.log(err)
-})
-```
-
-### Get Project
-
-**Available options:**
-
-| |  | Required | Default |
-| ------ | ----------- | ------ | ----- |
-| id | for example: 58844  | Yes | None |
-| cb | optional callback (in case you don't want to use promises) | No | |
-
-```javascript
-mycompany.getProject(58844, (err, response) => {
-  console.log(err, response)
-})
-
-/* Promises */
-
-mycompany.getProject(58844)
-.then((results) => {
-  console.log(results)
-})
-.catch((err) => {
-  console.log(err)
-})
-```
-
----
-
-### Get Projects Assigned
-
-Call as shown above in the [API Reference](#api-reference).
-
-Options reference:<br>
-[#get-projects-assigned](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/projects.md#get-projectsassigned)<br>
-
----
-
-### Get Projects Expenses
-
-Call as shown above in the [API Reference](#api-reference).
-
-Options reference:<br>
-[#get-projects-expenses](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/project_expenses.md)<br>
-
----
-
 ### Get Activities
 
 **Available options:**
@@ -268,24 +184,19 @@ Options reference:<br>
 | cb | optional callback (in case you don't want to use promises) | No | |
 
 Options reference:<br>
-[#214-get-activities](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/activities.md#get-activities)<br>
+[#get-activities](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/activities.md#get-activities)<br>
 [Sorting](#sorting)
 
 ```javascript
-mycompany.getActivities((err, response) => {
-  console.log(err, response)
-})
+/* Async/Await */
+const activities = await mycompany.getActivities()
 
-mycompany.getActivities({
+const activities = await mycompany.getActivities({
   from: '2017-01-02'
   to: '2017-01-02'
-},
-(err, response) => {
-  console.log(err, response)
 })
 
-/* Promises */
-
+/* Promise */
 mycompany.getActivities()
 .then((results) => {
   console.log(results)
@@ -304,6 +215,19 @@ mycompany.getActivities({
 .catch((err) => {
   console.log(err)
 })
+
+/* Callback */
+mycompany.getActivities((err, response) => {
+  console.log(err, response)
+})
+
+mycompany.getActivities({
+  from: '2017-01-02'
+  to: '2017-01-02'
+},
+(err, response) => {
+  console.log(err, response)
+})
 ```
 
 ### Get Activity
@@ -316,18 +240,21 @@ mycompany.getActivities({
 | cb | optional callback (in case you don't want to use promises) | No | |
 
 ```javascript
-mycompany.getActivity(58844, (err, response) => {
-  console.log(err, response)
-})
+/* Async/Await */
+const activity = await mycompany.getActivity(58844)
 
-/* Promises */
-
+/* Promise */
 mycompany.getActivity(58844)
 .then((results) => {
   console.log(results)
 })
 .catch((err) => {
   console.log(err)
+})
+
+/* Callback */
+mycompany.getActivity(58844, (err, response) => {
+  console.log(err, response)
 })
 ```
 
@@ -347,19 +274,14 @@ Options reference:<br>
 [Sorting](#sorting)
 
 ```javascript
-mycompany.getCompanies((err, response) => {
-  console.log(err, response)
-})
+/* Async/Await */
+const companies = await mycompany.getCompanies()
 
-mycompany.getCompanies({
+const companies = await mycompany.getCompanies({
   type: 'customer'
-},
-(err, response) => {
-  console.log(err, response)
 })
 
-/* Promises */
-
+/* Promise */
 mycompany.getCompanies()
 .then((results) => {
   console.log(results)
@@ -377,6 +299,18 @@ mycompany.getCompanies({
 .catch((err) => {
   console.log(err)
 })
+
+/* Callback */
+mycompany.getCompanies((err, response) => {
+  console.log(err, response)
+})
+
+mycompany.getCompanies({
+  type: 'customer'
+},
+(err, response) => {
+  console.log(err, response)
+})
 ```
 
 ### Get Company
@@ -389,12 +323,10 @@ mycompany.getCompanies({
 | cb | optional callback (in case you don't want to use promises) | No | |
 
 ```javascript
-mycompany.getCompany(58844, (err, response) => {
-  console.log(err, response)
-})
+/* Async/Await */
+const company = await mycompany.getCompany(58844)
 
-/* Promises */
-
+/* Promise */
 mycompany.getCompany(58844)
 .then((results) => {
   console.log(results)
@@ -402,7 +334,235 @@ mycompany.getCompany(58844)
 .catch((err) => {
   console.log(err)
 })
+
+/* Callback */
+mycompany.getCompany(58844, (err, response) => {
+  console.log(err, response)
+})
 ```
+
+---
+
+### Get Comments
+
+Call as shown above in the [API Reference](#api-reference).
+
+Options reference:<br>
+[#get-comments](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/comments.md#get-comments)<br>
+[Sorting](#sorting)
+
+### Get Comment
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+### Get Contacts People
+
+Call as shown above in the [API Reference](#api-reference).
+
+Available options: <br>
+[#get-contacts-people](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/contacts.md#get-contactspeople)<br>
+[Sorting](#sorting)
+
+### Get Contacts Person
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+### Get Deals
+
+Call as shown above in the [API Reference](#api-reference).
+
+Options reference:<br>
+[#get-deals](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/deals.md#get-deals)<br>
+[Sorting](#sorting)
+
+### Get Deal
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+### Get Deal Categories
+
+Call as shown above in the [API Reference](#api-reference).
+
+Options reference:<br>
+[#get-deal_categories](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/deal_categories.md#get-deal_categories)<br>
+[Sorting](#sorting)
+
+### Get Deal Category
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+### Get Invoices
+
+Call as shown above in the [API Reference](#api-reference).
+
+Options reference:<br>
+[#get-invoices](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/invoices.md#get-invoices)<br>
+[Sorting](#sorting)
+
+### Get Invoice
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+### Get Invoice Payments
+
+Call as shown above in the [API Reference](#api-reference).
+
+Options reference:<br>
+[#get-invoice-payments](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/invoice_payments.md#get-invoicespayments)<br>
+[Sorting](#sorting)
+
+### Get Invoice Payment
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+### Get Offers
+
+Call as shown above in the [API Reference](#api-reference).
+
+Options reference:<br>
+[#get-offers](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/offers.md#get-offers)<br>
+[Sorting](#sorting)
+
+### Get Offer
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+### Get Projects
+
+**Available options:**
+
+| |  | Required | Default |
+| ------ | ----------- | ------ | ----- |
+| options | for example: { include_archived: false } | No | None |
+| cb | optional callback (in case you don't want to use promises) | No | |
+
+Options reference:<br>
+[#get-projects](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/projects.md#get-projects)<br>
+[Sorting](#sorting)
+
+```javascript
+/* Async/Await */
+const projects = await mycompany.getProjects()
+
+const projects = await mycompany.getProjects({
+  include_archived: false
+})
+
+/* Promise */
+mycompany.getProjects()
+.then((results) => {
+  console.log(results)
+})
+.catch((err) => {
+  console.log(err)
+})
+
+mycompany.getProjects({
+  include_archived: false
+})
+.then((results) => {
+  console.log(results)
+})
+.catch((err) => {
+  console.log(err)
+})
+
+/* Callback */
+mycompany.getProjects((err, response) => {
+  console.log(err, response)
+})
+
+mycompany.getProjects({
+  include_archived: false
+},
+(err, response) => {
+  console.log(err, response)
+})
+```
+
+### Get Project
+
+**Available options:**
+
+| |  | Required | Default |
+| ------ | ----------- | ------ | ----- |
+| id | for example: 58844  | Yes | None |
+| cb | optional callback (in case you don't want to use promises) | No | |
+
+```javascript
+/* Async/Await */
+const project = await mycompany.getProject(58844)
+
+/* Promise */
+mycompany.getProject(58844)
+.then((results) => {
+  console.log(results)
+})
+.catch((err) => {
+  console.log(err)
+})
+
+/* Callback */
+mycompany.getProject(58844, (err, response) => {
+  console.log(err, response)
+})
+```
+
+### Get Projects Assigned
+
+Call as shown above in the [API Reference](#api-reference).
+
+Options reference:<br>
+[#get-projects-assigned](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/projects.md#get-projectsassigned)<br>
+
+### Get Projects Expenses
+
+Call as shown above in the [API Reference](#api-reference).
+
+Options reference:<br>
+[#get-projects-expenses](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/project_expenses.md)<br>
+
+---
+
+### Get Purchases
+
+Call as shown above in the [API Reference](#api-reference).
+
+Options reference:<br>
+[#get-purchases](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/purchases.md#get-purchases)<br>
+[Sorting](#sorting)
+
+### Get Purchase
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+### Get Purchase Categories
+
+Call as shown above in the [API Reference](#api-reference).
+
+Options reference:<br>
+[#get-purchases-categories](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/purchase_categories.md#get-purchasescategories)<br>
+[Sorting](#sorting)
+
+### Get Purchase Category
+
+Call as shown above in the [API Reference](#api-reference).
 
 ---
 
@@ -416,24 +576,19 @@ mycompany.getCompany(58844)
 | cb | optional callback (in case you don't want to use promises) | No | |
 
 Options reference:<br>
-[#254-get-schedules](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/schedules.md#get-schedules)<br>
+[#get-schedules](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/schedules.md#get-schedules)<br>
 [Sorting](#sorting)
 
 ```javascript
-mycompany.getSchedules((err, response) => {
-  console.log(err, response)
-})
+/* Async/Await */
+const schedules = await mycompany.getSchedules()
 
-mycompany.getSchedules({
+const schedules = await mycompany.getSchedules({
   from: '2017-01-02'
   to: '2017-01-02'
-}, 
-(err, response) => {
-  console.log(err, response)
 })
 
-/* Promises */
-
+/* Promise */
 mycompany.getSchedules()
 .then((results) => {
   console.log(results)
@@ -452,6 +607,19 @@ mycompany.getSchedules({
 .catch((err) => {
   console.log(err)
 })
+
+/* Callback */
+mycompany.getSchedules((err, response) => {
+  console.log(err, response)
+})
+
+mycompany.getSchedules({
+  from: '2017-01-02'
+  to: '2017-01-02'
+}, 
+(err, response) => {
+  console.log(err, response)
+})
 ```
 
 ### Get Schedule
@@ -464,12 +632,10 @@ mycompany.getSchedules({
 | cb | optional callback (in case you don't want to use promises) | No | |
 
 ```javascript
-mycompany.getSchedule(58844, (err, response) => {
-  console.log(err, response)
-})
+/* Async/Await */
+const schedule = await mycompany.getSchedule(58844)
 
-/* Promises */
-
+/* Promise */
 mycompany.getSchedule(58844)
 .then((results) => {
   console.log(results)
@@ -477,7 +643,26 @@ mycompany.getSchedule(58844)
 .catch((err) => {
   console.log(err)
 })
+
+/* Callback */
+mycompany.getSchedule(58844, (err, response) => {
+  console.log(err, response)
+})
 ```
+
+---
+
+### Get Units
+
+Call as shown above in the [API Reference](#api-reference).
+
+Options reference:<br>
+[#get-units](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/units.md#get-units)<br>
+[Sorting](#sorting)
+
+### Get Unit
+
+Call as shown above in the [API Reference](#api-reference).
 
 ---
 
@@ -491,16 +676,14 @@ mycompany.getSchedule(58844)
 | cb | optional callback (in case you don't want to use promises) | No | |
 
 Options reference:<br>
-[#254-get-schedules](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/users.md#get-users)<br>
+[#get-users](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/users.md#get-users)<br>
 [Sorting](#sorting)
 
 ```javascript
-mycompany.getUsers((err, response) => {
-  console.log(err, response)
-})
+/* Async/Await */
+const users = await mycompany.getUsers()
 
-/* Promises */
-
+/* Promise */
 mycompany.getUsers()
 .then((results) => {
   console.log(results)
@@ -509,6 +692,10 @@ mycompany.getUsers()
   console.log(err)
 })
 
+/* Callback */
+mycompany.getUsers((err, response) => {
+  console.log(err, response)
+})
 ```
 
 ### Get User
@@ -521,18 +708,21 @@ mycompany.getUsers()
 | cb | optional callback (in case you don't want to use promises) | No | |
 
 ```javascript
-mycompany.getUser(58844, (err, response) => {
-  console.log(err, response)
-})
+/* Async/Await */
+const user = await mycompany.getUser(58844)
 
-/* Promises */
-
+/* Promise */
 mycompany.getUser(58844)
 .then((results) => {
   console.log(results)
 })
 .catch((err) => {
   console.log(err)
+})
+
+/* Callback */
+mycompany.getUser(58844, (err, response) => {
+  console.log(err, response)
 })
 ```
 
@@ -545,8 +735,6 @@ Call as shown above in the [API Reference](#api-reference).
 Options reference:<br>
 [#get-user-employments](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/employments.md#get-usersemployments)<br>
 [Sorting](#sorting)
-
----
 
 ### Get User Employment
 
@@ -562,157 +750,7 @@ Options reference:<br>
 [#get-user-holidays](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/holidays.md#get-usersholidays)<br>
 [Sorting](#sorting)
 
----
-
 ### Get User Holiday
-
-Call as shown above in the [API Reference](#api-reference).
-
----
-
-### Get Purchases
-
-Call as shown above in the [API Reference](#api-reference).
-
-Options reference:<br>
-[#get-purchases](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/purchases.md#get-purchases)<br>
-[Sorting](#sorting)
-
----
-
-### Get Purchase
-
-Call as shown above in the [API Reference](#api-reference).
-
----
-
-### Get Purchase Categories
-
-Call as shown above in the [API Reference](#api-reference).
-
-Options reference:<br>
-[#get-purchases-categories](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/purchase_categories.md#get-purchasescategories)<br>
-[Sorting](#sorting)
-
----
-
-### Get Purchase Category
-
-Call as shown above in the [API Reference](#api-reference).
-
----
-
-### Get Deals
-
-Call as shown above in the [API Reference](#api-reference).
-
-Options reference:<br>
-[#221-get-deals](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/deals.md#get-deals)<br>
-[Sorting](#sorting)
-
----
-
-### Get Deal
-
-Call as shown above in the [API Reference](#api-reference).
-
----
-
-### Get Deal Categories
-
-Call as shown above in the [API Reference](#api-reference).
-
-Options reference:<br>
-[#get-deal_categories](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/deal_categories.md#get-deal_categories)<br>
-[Sorting](#sorting)
-
----
-
-### Get Deal Category
-
-Call as shown above in the [API Reference](#api-reference).
-
----
-
-### Get Offers
-
-Call as shown above in the [API Reference](#api-reference).
-
-Options reference:<br>
-[#224-get-offers](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/offers.md#get-offers)<br>
-[Sorting](#sorting)
-
-### Get Offer
-
-Call as shown above in the [API Reference](#api-reference).
-
----
-
-### Get Invoices
-
-Call as shown above in the [API Reference](#api-reference).
-
-Options reference:<br>
-[#227-get-invoices](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/invoices.md#get-invoices)<br>
-[Sorting](#sorting)
-
-### Get Invoice
-
-Call as shown above in the [API Reference](#api-reference).
-
----
-
-### Get Invoice Payments
-
-Call as shown above in the [API Reference](#api-reference).
-
-Options reference:<br>
-[#invoice-payments](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/invoice_payments.md#get-invoicespayments)<br>
-[Sorting](#sorting)
-
-### Get Invoice Payment
-
-Call as shown above in the [API Reference](#api-reference).
-
----
-
-### Get Units
-
-Call as shown above in the [API Reference](#api-reference).
-
-Options reference:<br>
-[#230-get-units](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/units.md#get-units)<br>
-[Sorting](#sorting)
-
-### Get Unit
-
-Call as shown above in the [API Reference](#api-reference).
-
----
-
-### Get Contacts People
-
-Call as shown above in the [API Reference](#api-reference).
-
-Available options: <br>
-[#239-get-contacts-people](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/contacts.md#get-contactspeople)<br>
-[Sorting](#sorting)
-
-### Get Contacts Person
-
-Call as shown above in the [API Reference](#api-reference).
-
----
-
-### Get Comments
-
-Call as shown above in the [API Reference](#api-reference).
-
-Options reference:<br>
-[#288-get-comments](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/comments.md#get-comments)<br>
-[Sorting](#sorting)
-
-### Get Comment
 
 Call as shown above in the [API Reference](#api-reference).
 
@@ -728,7 +766,7 @@ sort_by: 'title'
 sort_by: 'date desc'
 ```
 
-Read more: [#293-sortierung](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/README.md#sorting)
+Read more: [#sorting](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/README.md#sorting)
 
 ---
 
