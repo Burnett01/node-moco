@@ -82,6 +82,11 @@ Moco(
     getProjectsAssigned: [Object=options, function(class ErrorClass err, any results) cb] | Promise
     getProjectsExpenses: [Object=options, function(class ErrorClass err, any results) cb] | Promise
 
+    getPurchases: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getPurchase: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+    getPurchaseCategories: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getPurchaseCategory: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+
     getActivities: [Object=options, function(class ErrorClass err, any results) cb] | Promise
     getActivity: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
@@ -560,6 +565,38 @@ Options reference:<br>
 ---
 
 ### Get User Holiday
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+### Get Purchases
+
+Call as shown above in the [API Reference](#api-reference).
+
+Options reference:<br>
+[#get-purchases](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/purchases.md#get-purchases)<br>
+[Sorting](#sorting)
+
+---
+
+### Get Purchase
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+### Get Purchase Categories
+
+Call as shown above in the [API Reference](#api-reference).
+
+Options reference:<br>
+[#get-purchases-categories](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/purchase_categories.md#get-purchasescategories)<br>
+[Sorting](#sorting)
+
+---
+
+### Get Purchase Category
 
 Call as shown above in the [API Reference](#api-reference).
 
