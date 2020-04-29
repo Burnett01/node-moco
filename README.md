@@ -59,9 +59,6 @@ Features:
   * [Get User Holiday](#get-user-holiday)
 * [Sorting](#sorting)
 * [Setup / Install](#setup-install)
-* [Build](#build)
-  * [NPM](#npm)
-  * [Make](#make)
 * [Unit-Tests](#unit-tests)
   * [Make](#make-1)
   * [NPM](#npm-1)
@@ -777,18 +774,6 @@ Use `npm install @burnett01/node-moco`
 ```javascript
 const Moco = require('@burnett01/node-moco')
 ```
-
----
-
-## Build
-
-### NPM
-
-```npm run build```
-
-### Make
-
-```make build```
 
 ---
 
