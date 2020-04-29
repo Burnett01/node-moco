@@ -48,24 +48,6 @@ describe('Moco [TEST]', () => {
     expect(moco).to.have.property('perform')
     expect(moco.perform).to.be.a('function')
 
-    expect(moco).to.have.property('getProjects')
-    expect(moco).to.have.property('getProject')
-    expect(moco).to.have.property('getProjectsAssigned')
-    expect(moco).to.have.property('getProjectsExpenses')
-    expect(moco.getProjects).to.be.a('function')
-    expect(moco.getProject).to.be.a('function')
-    expect(moco.getProjectsAssigned).to.be.a('function')
-    expect(moco.getProjectsExpenses).to.be.a('function')
-
-    expect(moco).to.have.property('getPurchases')
-    expect(moco).to.have.property('getPurchase')
-    expect(moco).to.have.property('getPurchaseCategories')
-    expect(moco).to.have.property('getPurchaseCategory')
-    expect(moco.getPurchases).to.be.a('function')
-    expect(moco.getPurchase).to.be.a('function')
-    expect(moco.getPurchaseCategories).to.be.a('function')
-    expect(moco.getPurchaseCategory).to.be.a('function')
-
     expect(moco).to.have.property('getActivities')
     expect(moco).to.have.property('getActivity')
     expect(moco.getActivities).to.be.a('function')
@@ -76,10 +58,15 @@ describe('Moco [TEST]', () => {
     expect(moco.getCompanies).to.be.a('function')
     expect(moco.getCompany).to.be.a('function')
 
-    expect(moco).to.have.property('getSchedules')
-    expect(moco).to.have.property('getSchedule')
-    expect(moco.getSchedules).to.be.a('function')
-    expect(moco.getSchedule).to.be.a('function')
+    expect(moco).to.have.property('getComments')
+    expect(moco).to.have.property('getComment')
+    expect(moco.getComments).to.be.a('function')
+    expect(moco.getComment).to.be.a('function')
+
+    expect(moco).to.have.property('getContactsPeople')
+    expect(moco).to.have.property('getContactsPerson')
+    expect(moco.getContactsPeople).to.be.a('function')
+    expect(moco.getContactsPerson).to.be.a('function')
 
     expect(moco).to.have.property('getDeals')
     expect(moco).to.have.property('getDeal')
@@ -91,11 +78,6 @@ describe('Moco [TEST]', () => {
     expect(moco.getDealCategories).to.be.a('function')
     expect(moco.getDealCategory).to.be.a('function')
 
-    expect(moco).to.have.property('getOffers')
-    expect(moco).to.have.property('getOffer')
-    expect(moco.getOffers).to.be.a('function')
-    expect(moco.getOffer).to.be.a('function')
-
     expect(moco).to.have.property('getInvoices')
     expect(moco).to.have.property('getInvoice')
     expect(moco.getInvoices).to.be.a('function')
@@ -105,7 +87,37 @@ describe('Moco [TEST]', () => {
     expect(moco).to.have.property('getInvoicePayment')
     expect(moco.getInvoicePayments).to.be.a('function')
     expect(moco.getInvoicePayment).to.be.a('function')
-    
+
+    expect(moco).to.have.property('getOffers')
+    expect(moco).to.have.property('getOffer')
+    expect(moco.getOffers).to.be.a('function')
+    expect(moco.getOffer).to.be.a('function')
+
+    expect(moco).to.have.property('getProjects')
+    expect(moco).to.have.property('getProject')
+    expect(moco.getProjects).to.be.a('function')
+    expect(moco.getProject).to.be.a('function')
+
+    expect(moco).to.have.property('getProjectsAssigned')
+    expect(moco).to.have.property('getProjectsExpenses')
+    expect(moco.getProjectsAssigned).to.be.a('function')
+    expect(moco.getProjectsExpenses).to.be.a('function')
+
+    expect(moco).to.have.property('getPurchases')
+    expect(moco).to.have.property('getPurchase')
+    expect(moco.getPurchases).to.be.a('function')
+    expect(moco.getPurchase).to.be.a('function')
+
+    expect(moco).to.have.property('getPurchaseCategories')
+    expect(moco).to.have.property('getPurchaseCategory')
+    expect(moco.getPurchaseCategories).to.be.a('function')
+    expect(moco.getPurchaseCategory).to.be.a('function')
+
+    expect(moco).to.have.property('getSchedules')
+    expect(moco).to.have.property('getSchedule')
+    expect(moco.getSchedules).to.be.a('function')
+    expect(moco.getSchedule).to.be.a('function')
+
     expect(moco).to.have.property('getUnits')
     expect(moco).to.have.property('getUnit')
     expect(moco.getUnits).to.be.a('function')
@@ -125,16 +137,6 @@ describe('Moco [TEST]', () => {
     expect(moco).to.have.property('getUserHoliday')
     expect(moco.getUserHolidays).to.be.a('function')
     expect(moco.getUserHoliday).to.be.a('function')
-
-    expect(moco).to.have.property('getContactsPeople')
-    expect(moco).to.have.property('getContactsPerson')
-    expect(moco.getContactsPeople).to.be.a('function')
-    expect(moco.getContactsPerson).to.be.a('function')
-
-    expect(moco).to.have.property('getComments')
-    expect(moco).to.have.property('getComment')
-    expect(moco.getComments).to.be.a('function')
-    expect(moco.getComment).to.be.a('function')
 
     done()
   })
