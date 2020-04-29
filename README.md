@@ -77,52 +77,52 @@ Moco(
     this: Object=this
 
     /* Methods */
-    getProjects: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
-    getProject: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
-    getProjectsAssigned: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
-    getProjectsExpenses: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
+    getProjects: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getProject: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+    getProjectsAssigned: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getProjectsExpenses: [Object=options, function(class ErrorClass err, any results) cb] | Promise
 
-    getActivities: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
-    getActivity: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
+    getActivities: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getActivity: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
-    getCompanies: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
-    getCompany: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
+    getCompanies: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getCompany: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
-    getSchedules: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
-    getSchedule: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
+    getSchedules: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getSchedule: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
-    getDeals: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
-    getDeal: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
+    getDeals: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getDeal: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
-    getOffers: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
-    getOffer: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
+    getOffers: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getOffer: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
-    getInvoices: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
-    getInvoice: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
+    getInvoices: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getInvoice: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
-    getInvoicePayments: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
-    getInvoicePayment: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
+    getInvoicePayments: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getInvoicePayment: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
-    getUnits: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
-    getUnit: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
+    getUnits: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getUnit: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
-    getUsers: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
-    getUser: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
+    getUsers: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getUser: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
-    getUserEmployments: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
-    getUserEmployment: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
+    getUserEmployments: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getUserEmployment: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
-    getUserHolidays: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
-    getUserHoliday: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
+    getUserHolidays: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getUserHoliday: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
-    getContactsOrganizations: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
-    getContactsOrganization: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
+    getContactsOrganizations: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getContactsOrganization: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
-    getContactsPeople: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
-    getContactsPerson: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
+    getContactsPeople: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getContactsPerson: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
-    getComments: [Object=options, function(class ErrorClass err, any results) {} cb] | Promise
-    getComment: [String|Number=id, function(class ErrorClass err, any results) {} cb] | Promise
+    getComments: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getComment: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 }
 
 ```
