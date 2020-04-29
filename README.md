@@ -800,7 +800,7 @@ The testing-framework used in this module is [Mocha](https://github.com/mochajs/
 
 Output using [Mocha](https://github.com/mochajs/mocha) `list` reporter:   
 
-<img src="https://i.imgur.com/HFd1jii.png" />
+<img src="https://i.imgur.com/goybgOy.png" />
 
 Default reporter: `list`
 
