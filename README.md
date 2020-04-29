@@ -796,7 +796,7 @@ const Moco = require('@burnett01/node-moco')
 
 The testing-framework used in this module is [Mocha](https://github.com/mochajs/mocha) with the BDD / TDD assertion library [Chai](https://github.com/chaijs/chai).
 
-* test/test.default.js `Performs 1 tests` | [Source](../master/test/test.default.js)
+* test/test.default.js | [Source](../master/test/test.default.js)
 
 Output using [Mocha](https://github.com/mochajs/mocha) `list` reporter:   
 
