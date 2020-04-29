@@ -25,20 +25,14 @@
   "bugs": {
     "url": "https://github.com/Burnett01/node-moco/issues"
   },
-  "main": "dist/moco.js",
+  "main": "lib/moco.js",
   "scripts": {
-    "build": "babel lib -d dist",
-    "test": "mocha --require @babel/register --reporter list",
-    "prepublishOnly": "npm run build"
+    "test": "mocha --reporter list"
   },
   "dependencies": {
     "@burnett01/extended-request": "^1.6.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.3",
-    "@babel/core": "^7.8.3",
-    "@babel/preset-env": "^7.8.3",
-    "@babel/register": "^7.8.3",
     "chai": "^4.1.2",
     "mocha": "^7.0.0"
   }
