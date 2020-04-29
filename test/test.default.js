@@ -22,8 +22,8 @@
 *
 */
 
-import { expect } from 'chai'
-import Moco from '../lib/moco'
+const { expect } = require('chai')
+const Moco = require('../lib/moco')
 
 let moco = undefined
 
