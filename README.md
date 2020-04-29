@@ -94,6 +94,9 @@ Moco(
     getDeals: [Object=options, function(class ErrorClass err, any results) cb] | Promise
     getDeal: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
+    getDealCategories: [Object=options, function(class ErrorClass err, any results) cb] | Promise
+    getDealCategory: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
+
     getOffers: [Object=options, function(class ErrorClass err, any results) cb] | Promise
     getOffer: [String|Number=id, function(class ErrorClass err, any results) cb] | Promise
 
@@ -573,6 +576,22 @@ Options reference:<br>
 ---
 
 ### Get Deal
+
+Call as shown above in the [API Reference](#api-reference).
+
+---
+
+### Get Deal Categories
+
+Call as shown above in the [API Reference](#api-reference).
+
+Options reference:<br>
+[#get-deal_categories](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/sections/deal_categories.md#get-deal_categories)<br>
+[Sorting](#sorting)
+
+---
+
+### Get Deal Category
 
 Call as shown above in the [API Reference](#api-reference).
 
