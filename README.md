@@ -1,7 +1,7 @@
 
 # node-moco
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Build Status](https://travis-ci.org/Burnett01/node-moco.svg?branch=master)](https://travis-ci.org/Burnett01/node-moco) [![npm version](https://badge.fury.io/js/%40burnett01%2Fnode-moco.svg)](https://badge.fury.io/js/%40burnett01%2Fnode-moco)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Build Status](https://travis-ci.com/Burnett01/node-moco.svg?branch=master)](https://travis-ci.com/Burnett01/node-moco) [![npm version](https://badge.fury.io/js/%40burnett01%2Fnode-moco.svg)](https://badge.fury.io/js/%40burnett01%2Fnode-moco)
 
 A microservice api-client to access [Mocoapp.com API](https://github.com/hundertzehn/mocoapp-api-docs/blob/master/README.md).
 
