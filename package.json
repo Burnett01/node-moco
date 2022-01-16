@@ -1,6 +1,6 @@
 {
   "name": "@burnett01/node-moco",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "description": "A microservice api-client to access Mocoapp.com API",
   "keywords": [
     "moco",
